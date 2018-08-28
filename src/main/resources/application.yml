@@ -1,0 +1,13 @@
+server:
+  port: 2222
+spring:
+  application:
+    name: customer-service
+
+eureka.instance.prefer-ip-address: true
+#2.0新特性spring.cloud.client.ip-address
+eureka.instance.instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+eureka.client.serviceUrl.defaultZone: http://root:root@localhost:9999/eureka/
+
+eureka.instance.lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）
+eureka.instance.lease-expiration-duration-in-seconds: 10  # 发呆时间，即服务续约到期时间（缺省为90s）
