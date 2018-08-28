@@ -5,9 +5,9 @@ spring:
     name: customer-service
 
 eureka.instance.prefer-ip-address: true
-#2.0ĞÂÌØĞÔspring.cloud.client.ip-address
+#2.0æ–°ç‰¹æ€§spring.cloud.client.ip-address
 eureka.instance.instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
 eureka.client.serviceUrl.defaultZone: http://root:root@localhost:9999/eureka/
 
-eureka.instance.lease-renewal-interval-in-seconds: 5      # ĞÄÌøÊ±¼ä£¬¼´·şÎñĞøÔ¼¼ä¸ôÊ±¼ä£¨È±Ê¡Îª30s£©
-eureka.instance.lease-expiration-duration-in-seconds: 10  # ·¢´ôÊ±¼ä£¬¼´·şÎñĞøÔ¼µ½ÆÚÊ±¼ä£¨È±Ê¡Îª90s£©
+eureka.instance.lease-renewal-interval-in-seconds: 5      # å¿ƒè·³æ—¶é—´ï¼Œå³æœåŠ¡ç»­çº¦é—´éš”æ—¶é—´ï¼ˆç¼ºçœä¸º30sï¼‰
+eureka.instance.lease-expiration-duration-in-seconds: 10  # å‘å‘†æ—¶é—´ï¼Œå³æœåŠ¡ç»­çº¦åˆ°æœŸæ—¶é—´ï¼ˆç¼ºçœä¸º90sï¼‰
